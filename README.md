@@ -55,3 +55,7 @@ open "build/Live Photo Repair.app"
 ```
 
 The first launch asks for Photos access. Test on a few items before repairing in bulk.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
