@@ -11,6 +11,8 @@ rm -rf "$APP"
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources"
 cp "$(swift build -c release --arch arm64 --arch x86_64 --show-bin-path)/LivePhotoRepair" "$APP/Contents/MacOS/"
 cp Resources/Info.plist "$APP/Contents/"
+# Finder metadata on copied files makes codesign fail.
+xattr -cr "$APP"
 codesign --force --sign - "$APP"
 
 echo "Built $APP"
