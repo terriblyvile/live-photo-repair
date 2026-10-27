@@ -5,7 +5,10 @@ import Photos
 /// Finds short videos that look like flattened Live Photos and tries to match each
 /// one with a still taken at the same moment.
 struct LibraryScanner {
-    static let durationRange = 0.8...4.5
+    /// Google Photos can trim a Live Photo's motion to well under a second when it
+    /// exports it, so the lower bound is low. Clips this short still need camera
+    /// evidence to rate above Low.
+    static let durationRange = 0.2...4.5
     static let liveLikeDuration = 1.2...3.6
     /// How far apart (seconds) a still and video can be and still count as one capture.
     static let pairingWindow: TimeInterval = 2.0

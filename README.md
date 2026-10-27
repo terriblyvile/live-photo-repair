@@ -19,7 +19,7 @@ xattr -dr com.apple.quarantine "/Applications/Live Photo Repair.app"
 
 ## How it works
 
-1. **Scan** finds videos between 0.8 and 4.5 seconds long and rates how likely each one is a former Live Photo:
+1. **Scan** finds videos between 0.2 and 4.5 seconds long (Google Photos sometimes trims the motion to under a second) and rates how likely each one is a former Live Photo:
    - camera evidence: the recording device in the movie's metadata, a camera filename like `IMG_1234.MOV`, or a GPS location
    - a typical Live Photo length (1.2 to 3.6 seconds)
    - an iPhone camera frame: 4:3 or 16:9 and at least 1080 pixels on the short side
